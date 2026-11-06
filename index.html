@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>naygo</title>
+  </head>
+
+  <body class="index">
+    <header>
+      <span class="counter" id="counter" hidden>
+        visitas <span class="digits" id="digits"></span>
+      </span>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" aria-current="true">eu</a></li>
+          <li><a href="portfolio.html">portfolio</a></li>
+          <li><a href="books.html">livros</a></li>
+          <li><a href="gallery.html">galeria</a></li>
+          <li><a href="cool-stuff.html">coisas legais</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="index-container">
+      <img src="assets/nayla.jpeg" alt="foto de nayla" />
+
+      <div class="index-content">
+        <h1>NAYLA GOMES</h1>
+        <p class="bio">
+          oi! sou software engineer full-stack. gosto de interfaces
+          rápidas, código claro e de sites que parecem feitos por gente.
+        </p>
+
+        <p class="bio">
+          se você quiser conversar sobre algum projeto, oportunidade de trabalho
+          ou apenas bater um papo, me manda uma mensagem!
+        </p>
+
+        <div class="links">
+          <a href="https://github.com/naygo">github</a>
+          <span aria-hidden="true">//</span>
+          <a href="https://linkedin.com/in/naygo/">linkedin</a>
+          <span aria-hidden="true">//</span>
+          <a href="mailto:nayla.cgs@gmail.com" class="button">enviar e-mail</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="small">
+      <p id="bh">belo horizonte, mg</p>
+      <p>última atualização: 06/11/2026</p>
+    </footer>
+
+    <script type="module" src="open-meteo.js"></script>
+    <script
+      data-goatcounter="https://naygo.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+    <script src="visits.js" defer></script>
+  </body>
+</html>
