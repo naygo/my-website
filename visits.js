@@ -1,4 +1,4 @@
-const GOATCOUNTER = "https://naygo.goatcounter.com/count";
+const GOATCOUNTER = "https://naygo.goatcounter.com";
 
 function showCounter(n) {
   document.getElementById("digits").innerHTML = String(n)

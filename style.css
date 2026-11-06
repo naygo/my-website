@@ -40,6 +40,10 @@ nav {
   }
 }
 
+.counter[hidden] {
+  display: none;
+}
+
 .counter {
   display: flex;
   align-items: center;
@@ -49,10 +53,10 @@ nav {
 
 .digits {
   display: flex;
-  gap: 1;
+  gap: 1px;
 
   span {
-    font: 12px, "Courier New", monospace;
+    font: 12px "Courier New", monospace;
     border: 1px solid black;
     padding: 2px 3px;
   }
