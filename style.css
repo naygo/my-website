@@ -25,6 +25,8 @@ a {
 }
 
 nav {
+  margin-left: auto;
+
   ul {
     display: flex;
     gap: 24px;
