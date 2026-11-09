@@ -64,11 +64,16 @@ nav {
   }
 }
 
+.name {
+  font-style: italic;
+}
+
 .index-container {
   display: flex;
 
   img {
     width: 200px;
+    height: auto;
     aspect-ratio: 3/4;
   }
 }
@@ -145,8 +150,13 @@ footer {
   columns: 200px;
   column-gap: 5px;
 
+  &:empty {
+    min-height: 100vh;
+  }
+
   img {
     width: 100%;
+    height: auto;
     margin-bottom: 5px;
     break-inside: avoid;
   }
