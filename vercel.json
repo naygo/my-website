@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/visits.json",
+      "destination": "https://naygo.goatcounter.com/counter/TOTAL.json"
+    }
+  ]
+}
