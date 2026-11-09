@@ -6,23 +6,24 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <title>gallery</title>
+    <title>galeria – naygo</title>
   </head>
 
   <body class="index">
+    <a class="skip-link" href="#main">pular para o conteúdo</a>
     <header>
-      <nav>
+      <nav aria-label="principal">
         <ul>
           <li><a href="index.html">eu</a></li>
           <li><a href="portfolio.html">portfolio</a></li>
           <li><a href="books.html">livros</a></li>
-          <li><a href="gallery.html" aria-current>galeria</a></li>
+          <li><a href="gallery.html" aria-current="page">galeria</a></li>
           <li><a href="cool-stuff.html">coisas legais</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="pages-container">
+    <main id="main" class="pages-container">
       <h1>galeria</h1>
       <p class="intro">uma seleção de algumas fotos que tiro no meu dia a dia</p>
       <div class="gallery" data-gallery="assets/gallery"></div>

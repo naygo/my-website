@@ -6,28 +6,29 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <title>livros</title>
+    <title>livros – naygo</title>
   </head>
 
   <body class="index">
+    <a class="skip-link" href="#main">pular para o conteúdo</a>
     <header>
-      <nav>
+      <nav aria-label="principal">
         <ul>
           <li><a href="index.html">eu</a></li>
           <li><a href="portfolio.html">portfolio</a></li>
-          <li><a href="books.html" aria-current>livros</a></li>
+          <li><a href="books.html" aria-current="page">livros</a></li>
           <li><a href="gallery.html">galeria</a></li>
           <li><a href="cool-stuff.html">coisas legais</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="pages-container">
+    <main id="main" class="pages-container">
       <h1>livros</h1>
       <p class="intro">
         o que estou lendo, que já li ou tenho vontade de ler
       </p>
-      <div class="gallery" data-gallery="assets/books"></div>
+      <div class="gallery" data-gallery="assets/books" data-alts></div>
     </main>
 
     <footer class="small">
@@ -36,58 +37,6 @@
     </footer>
 
     <script type="module" src="gallery.js"></script>
-    <script>
-      const el = document.getElementById("bh");
-
-      const climas = {
-        0: ["céu limpo", "☀️"],
-        1: ["poucas nuvens", "🌤️"],
-        2: ["parcialmente nublado", "⛅"],
-        3: ["nublado", "☁️"],
-        45: ["neblina", "🌫️"],
-        48: ["neblina", "🌫️"],
-        51: ["garoa", "🌦️"],
-        53: ["garoa", "🌦️"],
-        55: ["garoa", "🌦️"],
-        61: ["chuva fraca", "🌧️"],
-        63: ["chuva", "🌧️"],
-        65: ["chuva forte", "🌧️"],
-        80: ["pancadas de chuva", "🌦️"],
-        81: ["pancadas de chuva", "🌧️"],
-        82: ["temporal", "⛈️"],
-        95: ["trovoada", "⛈️"],
-        96: ["trovoada", "⛈️"],
-        99: ["trovoada", "⛈️"],
-      };
-
-      let weather = "";
-
-      function hour() {
-        return new Date().toLocaleTimeString("pt-BR", {
-          timeZone: "America/Sao_Paulo",
-          hour: "2-digit",
-          minute: "2-digit",
-        });
-      }
-
-      function show() {
-        el.textContent = `${hour()} em belo horizonte${weather}`;
-      }
-
-      fetch(
-        "https://api.open-meteo.com/v1/forecast?latitude=-19.92&longitude=-43.94&current=temperature_2m,weather_code&timezone=America%2FSao_Paulo",
-      )
-        .then((r) => r.json())
-        .then((d) => {
-          const celsius = Math.round(d.current.temperature_2m);
-          const [text, emoji] = climas[d.current.weather_code] ?? ["", ""];
-          weather = ` · ${celsius}°C, ${text} ${emoji}`;
-          show();
-        })
-        .catch(() => {}); // se a API falhar, mostra só a hora
-
-      show();
-      setInterval(show, 60000); // atualiza o relógio a cada minuto
-    </script>
+    <script type="module" src="open-meteo.js"></script>
   </body>
 </html>

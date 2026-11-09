@@ -1,4 +1,5 @@
 function showCounter(n) {
+  document.getElementById("counter").setAttribute("aria-label", `visitas: ${Number(n)}`);
   document.getElementById("digits").innerHTML = String(n)
     .padStart(6, "0")
     .split("")
