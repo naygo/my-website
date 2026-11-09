@@ -66,23 +66,26 @@ nav {
 
 .name {
   font-style: italic;
+  line-height: 1;
 }
 
 .index-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
   img {
-    width: 200px;
+    width: min(100%, 360px);
     height: auto;
-    aspect-ratio: 3/4;
+    aspect-ratio: 3/2;
+    object-fit: cover;
   }
 }
 
 .index-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 20px;
 }
 
 .bio {
@@ -93,7 +96,9 @@ nav {
 
 .links {
   display: flex;
+  justify-content: center;
   gap: 8px;
+  line-height: 1;
 }
 
 footer {
@@ -114,10 +119,14 @@ footer {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 20px 0;
+  padding: 20px 0 32px;
   overflow-y: auto;
   scrollbar-width: none;
   mask-image: linear-gradient(transparent, #000 24px, #000 calc(100% - 24px), transparent);
+
+  h1 {
+    margin-bottom: 16px;
+  }
 
   ul {
     list-style-position: inside;
@@ -208,13 +217,7 @@ footer {
     mask-image: none;
   }
 
-  .index-container {
-    flex-direction: column;
-    gap: 16px;
-  }
-
   .index-content {
-    padding: 0;
     gap: 16px;
   }
 
