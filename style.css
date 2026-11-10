@@ -43,7 +43,8 @@ nav {
 }
 
 .counter[hidden] {
-  display: none;
+  display: flex;
+  visibility: hidden;
 }
 
 .counter {
@@ -228,5 +229,7 @@ footer {
   footer {
     flex-wrap: wrap;
     gap: 4px 16px;
+    /* reserva 2 linhas: o texto do clima chega por JS e quebra a linha */
+    min-height: calc(2lh + 4px + 11px);
   }
 }
